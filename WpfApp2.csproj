@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="student\free-icon-font-undo.png" />
+    <None Remove="student\free-icon-personal-9290689.png" />
+    <None Remove="student\free-icon-transparency-15552286.png" />
+    <None Remove="student\free-icon-transparency-15552398.png" />
+    <None Remove="student\free-icon-transparency-5307735.png" />
+    <None Remove="student\free-icon-view-11279638.png" />
+    <None Remove="student\free-icon-vision-11259307.png" />
+    <None Remove="student\search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="student\free-icon-font-undo.png" />
+    <Resource Include="student\free-icon-personal-9290689.png" />
+    <Resource Include="student\free-icon-transparency-15552286.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="student\free-icon-transparency-15552398.png" />
+    <Resource Include="student\free-icon-transparency-5307735.png" />
+    <Resource Include="student\free-icon-view-11279638.png" />
+    <Resource Include="student\free-icon-vision-11259307.png" />
+    <Resource Include="student\search.png" />
+  </ItemGroup>
+
+</Project>

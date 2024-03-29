@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFF3C0C0" Offset="1"/>
+            <GradientStop Color="#FFFFFA91"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Name="name" Background="Snow" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="5" />
+        <Image Source="C:\Users\student\Desktop\Kozyrev\WpfApp2\student\free-icon-transparency-5307735.png" Grid.RowSpan="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="4" Grid.Row="2" Text="Введи своё имя!" Grid.ColumnSpan="3"   FontSize="19" Grid.RowSpan="1" VerticalAlignment="Top"/>
+        <Image Source="C:\Users\student\Desktop\Kozyrev\WpfApp2\student\free-icon-font-undo.png" Grid.Column="7" Grid.ColumnSpan="1" Grid.Row="2"/>
+        <TextBox Name="password" Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="5" Background="Snow"/>
+        <Image Source="C:\Users\student\Desktop\Kozyrev\WpfApp2\student\free-icon-personal-9290689.png" Grid.RowSpan="2" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="4" Grid.Row="5" Text="Введи свой пароль" Grid.ColumnSpan="3"   FontSize="19" Grid.RowSpan="1" VerticalAlignment="Top"/>
+        <Button Name="invise" Grid.Column="9" Grid.Row="6" Margin="5" Click="invise_Click" Background="Snow"  Content="click"/>
+        
+        <Image Source="C:\Users\student\Desktop\Kozyrev\WpfApp2\student\free-icon-font-undo.png" Grid.Column="7" Grid.ColumnSpan="1" Grid.Row="5"/>
+        <Button Name="voiti"  Grid.Column="5"  Grid.ColumnSpan="2" Grid.Row="9" Content="Войти" FontSize="31" Click="voiti_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF7DB3"/>
+                    <GradientStop Color="#FFFFF9BD" Offset="1"/>
+                    <GradientStop Color="#FFD0CCA1" Offset="0"/>
+                    <GradientStop Color="#FFFFC775" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Text="не зарегестрированны?" Grid.Column="4"  Grid.ColumnSpan="3" Grid.Row="8" FontSize="17" />
+        <Button Name="but_registr" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="8" Content="зарегестрироваться" VerticalContentAlignment="Top" Click="but_registr_Click"/>
+        
+    </Grid>
+</Window>
