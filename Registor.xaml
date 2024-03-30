@@ -1,12 +1,98 @@
-﻿<Window x:Class="WpfApp2.Registor"
+﻿<Window x:Class="WpfApp2.registor"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Registor" Height="450" Width="800">
+        Title="registor" Height="550" Width="900" Closing="Window_Closing">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFF3C0C0" Offset="1"/>
+            <GradientStop Color="#FFFFFA91"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+       
         
+        <TextBlock Text="| " Grid.Row="1" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock Text="| " Grid.Row="2" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock Text="| " Grid.Row="3" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock Text="| " Grid.Row="4" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock Text="| " Grid.Row="5" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock Text="| " Grid.Row="6" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock Text="| " Grid.Row="7" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock Text="| " Grid.Row="8" Grid.Column="4" FontSize="30" HorizontalAlignment="Right"></TextBlock>
+
+        <TextBlock Text="| " Grid.Row="1" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="| " Grid.Row="2" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="| " Grid.Row="3" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="| " Grid.Row="4" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="| " Grid.Row="5" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="| " Grid.Row="6" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="| " Grid.Row="7" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="| " Grid.Row="8" Grid.Column="9" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+
+
+
+        <TextBlock Text="email" Grid.Row="1" Grid.Column="5" TextAlignment="Center" Grid.ColumnSpan="4" FontSize="25"/>
+        <TextBox Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="4" Name="MailBox" />
+        <TextBlock Text="Логин" Grid.Row="3" Grid.Column="5" TextAlignment="Center" Grid.ColumnSpan="4" FontSize="25"/>
+        <TextBox Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="4"  Name="LoginBox"/>
+        <TextBlock Text="Пароль" Grid.Row="5" Grid.Column="5" TextAlignment="Center" Grid.ColumnSpan="4" FontSize="25"/>
+        <TextBox Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="4" Name="PasswordBox"/>
+        <TextBlock Text="Повторить пароль" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="4" TextAlignment="Center" FontSize="25"/>
+        <TextBox Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="4" />
+
+        <Button Name="registorBtn" Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="4" Content="зарегестрироваться" Click="registorBtn_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3C0C0" Offset="1"/>
+                    <GradientStop Color="#FFFFFA91"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="Uzhe" Click="opo" Grid.ColumnSpan="4"  Grid.Row="9" Grid.Column="5" Content="Уже зарегестрированны?" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3C0C0" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Image Source="C:\Users\student\Desktop\Practika\pictures\free-icon-personal-9290689.png" Grid.Column="1" Grid.Row="7" Grid.RowSpan="4" Grid.ColumnSpan="3"/>
+        <TextBlock Text="Чтобы зарегестрироваться введи эти данные! Никакого волшебства, просто буквы и цифры" Grid.Column="1" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="3" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+
     </Grid>
 </Window>

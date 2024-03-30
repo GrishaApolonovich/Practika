@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,15 +34,29 @@ namespace WpfApp2
 
         private void voiti_Click(object sender, RoutedEventArgs e)
         {
+            var login = LoginBox.Text;
+            var password = PasswordBox.Text;
+            var context = new AppDbContext();
+            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == password);
+            if (user is null)
+            {
+                MessageBox.Show("Неправильный логин или пароль!");
+                return;
+            }
 
+            MessageBox.Show("Вы успешно вошли в аккаунт!");
         }
 
         private void but_registr_Click(object sender, RoutedEventArgs e)
         {
-            Registor registor = new Registor();
-
+            registor registor = new registor();
             registor.Show();
             this.Hide();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

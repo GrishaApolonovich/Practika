@@ -8,28 +8,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="student\free-icon-font-undo.png" />
-    <None Remove="student\free-icon-personal-9290689.png" />
-    <None Remove="student\free-icon-transparency-15552286.png" />
-    <None Remove="student\free-icon-transparency-15552398.png" />
-    <None Remove="student\free-icon-transparency-5307735.png" />
-    <None Remove="student\free-icon-view-11279638.png" />
-    <None Remove="student\free-icon-vision-11259307.png" />
-    <None Remove="student\search.png" />
+    <None Remove="pictures\free-icon-font-user-3917688.png" />
+    <None Remove="pictures\free-icon-personal-9290689.png" />
+    <None Remove="pictures\free-icon-transparency-12855461.png" />
+    <None Remove="pictures\free-icon-transparency-5307735.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="student\free-icon-font-undo.png" />
-    <Resource Include="student\free-icon-personal-9290689.png" />
-    <Resource Include="student\free-icon-transparency-15552286.png" />
+    <Resource Include="pictures\free-icon-personal-9290689.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="student\free-icon-transparency-15552398.png" />
-    <Resource Include="student\free-icon-transparency-5307735.png" />
-    <Resource Include="student\free-icon-view-11279638.png" />
-    <Resource Include="student\free-icon-vision-11259307.png" />
-    <Resource Include="student\search.png" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pictures\free-icon-font-user-3917688.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pictures\free-icon-transparency-12855461.png" />
+    <Resource Include="pictures\free-icon-transparency-5307735.png" />
   </ItemGroup>
 
 </Project>
