@@ -37,12 +37,20 @@ namespace WpfApp2
             var login = LoginBox.Text;
             var password = PasswordBox.Text;
             var context = new AppDbContext();
-            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == password);
+            var email = LoginBox.Text;
+            var user = context.Users.SingleOrDefault(x => x.Login == login || x.Email == email && x.Password == password);
+            
+
+
             if (user is null)
             {
-                MessageBox.Show("Неправильный логин или пароль!");
+                LoginBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                PasswordBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Неправильное имя или пароль!");
                 return;
             }
+
+
 
             MessageBox.Show("Вы успешно вошли в аккаунт!");
         }
@@ -58,5 +66,6 @@ namespace WpfApp2
         {
             Environment.Exit(0);
         }
+
     }
 }

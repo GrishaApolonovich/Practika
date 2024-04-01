@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,9 +34,74 @@ namespace WpfApp2
 
             var password = PasswordBox.Text;
 
+            var proverPassword = PasswordPBox.Text;
+
             var context = new AppDbContext();
 
             var user_exists = context.Users.FirstOrDefault(x => x.Login == login);
+
+            if(email.Length == 0)
+            {
+                MailBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Напишите свою почту");
+                return;
+            }
+            else if (!Regex.IsMatch(email, @"[@]"))
+            {
+                MailBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Почта должна содержать специальный знаки - @ и .");
+                return;
+            }
+            else if (!Regex.IsMatch(email, @"[.]"))
+            {
+                MailBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Почта должна содержать специальный знаки - @ и .");
+                return;
+            }
+
+            if (login.Length == 0)
+            {
+                LoginBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Напишите свой логин");
+                return;
+            }
+
+
+            if(password.Length == 0)
+            {
+                PasswordBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Напишите свой пароль");
+                return;
+            }
+            else if (password.Length < 3)
+            {
+                PasswordBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Пароль должен быть длинее 3х символов ");
+                return;
+            }
+            else if(!Regex.IsMatch(password, @"[@#$]"))
+            {
+                PasswordBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Пароль должен содержать хоть один специальный символ");
+                return;
+            }
+
+            if (proverPassword.Length == 0)
+            {
+                PasswordPBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Напишите повторно пароль");
+                return;
+            }
+
+            if (proverPassword != password)
+            {
+                PasswordPBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Пароль не сходиться");
+                return;
+            }
+
+
+            
             if (user_exists is not null)
             {
                 MessageBox.Show("Такой пользователь уже в клубе крутышей");
